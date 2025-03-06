@@ -11,6 +11,11 @@ namespace Project2_4
     {
         public static void check(int m, int n, int[,] arr, out bool flag)
         {
+            if(arr == null || arr.Length == 0)
+            {
+                throw new Exception("数组为空");
+            }
+
             flag = true;
             int[] flatArr = arr.Cast<int>().ToArray();
             int core_num = n + 1;

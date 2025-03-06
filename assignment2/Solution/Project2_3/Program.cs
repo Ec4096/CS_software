@@ -16,14 +16,23 @@ namespace Project2_3
             {
                 Prime.Add(i);
             }
-            for (int i = 2; i <= 100; i++)
+            //for (int i = 2; i <= 100; i++)
+            //{
+            //    for(int j = 2;i*j<= 100; j++)
+            //    {
+            //        if (Prime.Contains(i * j))
+            //        {
+            //            Prime.Remove(i * j);
+            //        }
+            //    }
+            //}
+            for (int i = 2; i * i <= 100; i++)
             {
-                for(int j = 2;i*j<= 100; j++)
+                if (!Prime.Contains(i)) continue;
+                for (int j = i*i ; j <= 100; j+=i)
                 {
-                    if (Prime.Contains(i * j))
-                    {
-                        Prime.Remove(i * j);
-                    }
+                    
+                        Prime.Remove(j);
                 }
             }
         }
