@@ -101,7 +101,7 @@ namespace UnitTestProject1
         public void TestQueryOrdersByTotalAmount()
         {
             Order order1 = new Order(1, "Customer1");
-            order1.OrderDetailsList.Add(new OrderDetails("Product1", 2, 100));
+            order1.OrderDetailsList.Add(new OrderDetails("Product1", 2, 200));
             orderService.AddOrder(order1);
             Order order2 = new Order(2, "Customer2");
             order2.OrderDetailsList.Add(new OrderDetails("Product2", 1, 200));
@@ -118,7 +118,7 @@ namespace UnitTestProject1
             order1.OrderDetailsList.Add(new OrderDetails("Product1", 2, 100));
             orderService.AddOrder(order1);
             Order order2 = new Order(2, "Customer2");
-            order2.OrderDetailsList.Add(new OrderDetails("Product2", 1, 200));
+            order2.OrderDetailsList.Add(new OrderDetails("Product2", 1, 100));
             orderService.AddOrder(order2);
             orderService.SortOrders((o1, o2) => o2.TotalAmount.CompareTo(o1.TotalAmount));
             var result = orderService.QueryOrders(o => true);
