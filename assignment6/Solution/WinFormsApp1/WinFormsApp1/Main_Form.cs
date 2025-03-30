@@ -61,6 +61,17 @@ namespace WinFormsApp1
             }
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchText = txtSearch.Text.ToLower();
+            orderBindingSource.DataSource = orderService.QueryOrders(o =>
+                o.OrderId.ToString().Contains(searchText) ||
+                o.Customer.ToLower().Contains(searchText) ||
+                o.OrderDetailsList.Any(d => d.ProductName.ToLower().Contains(searchText))
+            );
+            orderBindingSource.ResetBindings(false);
+        }
+
         private void RefreshOrderList()
         {
             orderBindingSource.DataSource = orderService.QueryOrders(o => true);

@@ -11,6 +11,8 @@
         private System.Windows.Forms.Button btnAddOrder;
         private System.Windows.Forms.Button btnEditOrder;
         private System.Windows.Forms.Button btnDeleteOrder;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSearch;
 
         /// <summary>
         ///  Clean up any resources being used.
@@ -40,13 +42,15 @@
             this.btnAddOrder = new System.Windows.Forms.Button();
             this.btnEditOrder = new System.Windows.Forms.Button();
             this.btnDeleteOrder = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvOrders
             // 
-            this.dgvOrders.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvOrders.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrders.Location = new System.Drawing.Point(12, 12);
@@ -56,7 +60,7 @@
             // 
             // dgvOrderDetails
             // 
-            this.dgvOrderDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvOrderDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvOrderDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrderDetails.Location = new System.Drawing.Point(12, 218);
@@ -69,7 +73,7 @@
             this.btnAddOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAddOrder.Location = new System.Drawing.Point(12, 424);
             this.btnAddOrder.Name = "btnAddOrder";
-            this.btnAddOrder.Size = new System.Drawing.Size(75, 23);
+            this.btnAddOrder.Size = new System.Drawing.Size(75, 25);
             this.btnAddOrder.TabIndex = 2;
             this.btnAddOrder.Text = "Add Order";
             this.btnAddOrder.UseVisualStyleBackColor = true;
@@ -80,7 +84,7 @@
             this.btnEditOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnEditOrder.Location = new System.Drawing.Point(93, 424);
             this.btnEditOrder.Name = "btnEditOrder";
-            this.btnEditOrder.Size = new System.Drawing.Size(75, 23);
+            this.btnEditOrder.Size = new System.Drawing.Size(75, 25);
             this.btnEditOrder.TabIndex = 3;
             this.btnEditOrder.Text = "Edit Order";
             this.btnEditOrder.UseVisualStyleBackColor = true;
@@ -91,15 +95,36 @@
             this.btnDeleteOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDeleteOrder.Location = new System.Drawing.Point(174, 424);
             this.btnDeleteOrder.Name = "btnDeleteOrder";
-            this.btnDeleteOrder.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteOrder.Size = new System.Drawing.Size(75, 25);
             this.btnDeleteOrder.TabIndex = 4;
             this.btnDeleteOrder.Text = "Delete Order";
             this.btnDeleteOrder.UseVisualStyleBackColor = true;
             this.btnDeleteOrder.Click += new System.EventHandler(this.btnDeleteOrder_Click);
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtSearch.Location = new System.Drawing.Point(255, 426);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(200, 20);
+            this.txtSearch.TabIndex = 5;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSearch.Location = new System.Drawing.Point(461, 424);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 25);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // MainForm
             // 
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnDeleteOrder);
             this.Controls.Add(this.btnEditOrder);
             this.Controls.Add(this.btnAddOrder);
@@ -110,6 +135,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetails)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

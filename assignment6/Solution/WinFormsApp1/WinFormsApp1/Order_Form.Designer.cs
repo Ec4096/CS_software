@@ -80,7 +80,7 @@
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Location = new System.Drawing.Point(713, 270);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(75, 25);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@
             // 
             this.btnAddOrderDetail.Location = new System.Drawing.Point(330, 270);
             this.btnAddOrderDetail.Name = "btnAddOrderDetail";
-            this.btnAddOrderDetail.Size = new System.Drawing.Size(75, 23);
+            this.btnAddOrderDetail.Size = new System.Drawing.Size(75, 25);
             this.btnAddOrderDetail.TabIndex = 7;
             this.btnAddOrderDetail.Text = "Add Detail";
             this.btnAddOrderDetail.UseVisualStyleBackColor = true;
